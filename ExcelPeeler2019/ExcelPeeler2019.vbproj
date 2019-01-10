@@ -75,10 +75,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CmdExportToExcel\CmdExportToExcel.vb" />
-    <Compile Include="CmdExportToExcel\Dialog1.Designer.vb">
+    <Compile Include="CmdImportToExcel\Dialog1.Designer.vb">
       <DependentUpon>Dialog1.vb</DependentUpon>
     </Compile>
-    <Compile Include="CmdExportToExcel\Dialog1.vb">
+    <Compile Include="CmdImportToExcel\Dialog1.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CmdExportToExcel\DlgCatAndParam.designer.vb">
@@ -168,8 +168,6 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="CmdImportToExcel\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
