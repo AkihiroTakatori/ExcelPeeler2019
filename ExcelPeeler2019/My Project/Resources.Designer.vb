@@ -59,5 +59,14 @@ Namespace My.Resources
                 resourceCulture = value
             End Set
         End Property
+        
+        '''<summary>
+        '''  エクセルにパラメータを出力 に類似しているローカライズされた文字列を検索します。
+        '''</summary>
+        Friend ReadOnly Property CMD_EXPORTTOEXCEL() As String
+            Get
+                Return ResourceManager.GetString("CMD_EXPORTTOEXCEL", resourceCulture)
+            End Get
+        End Property
     End Module
 End Namespace
