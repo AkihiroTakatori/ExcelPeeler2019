@@ -54,6 +54,8 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -73,6 +75,26 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CmdExportToExcel\CmdExportToExcel.vb" />
+    <Compile Include="CmdExportToExcel\Dialog1.Designer.vb">
+      <DependentUpon>Dialog1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CmdExportToExcel\Dialog1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CmdExportToExcel\DlgCatAndParam.designer.vb">
+      <DependentUpon>DlgCatAndParam.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CmdExportToExcel\DlgCatAndParam.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CmdExportToExcel\DlgCatParamExp.designer.vb">
+      <DependentUpon>DlgCatParamExp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CmdExportToExcel\DlgCatParamExp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogItems\ItmParameter.vb" />
+    <Compile Include="DialogItems\ItmCategory.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -88,9 +110,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Utills\clsExcelManager.vb" />
+    <Compile Include="Utills\ClsExcelManager.vb" />
+    <Compile Include="Utills\ClsExcelUtils.vb" />
+    <Compile Include="Utills\MdlDialogUtil.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="CmdExportToExcel\DlgCatAndParam.resx">
+      <DependentUpon>DlgCatAndParam.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CmdExportToExcel\DlgCatParamExp.resx">
+      <DependentUpon>DlgCatParamExp.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>

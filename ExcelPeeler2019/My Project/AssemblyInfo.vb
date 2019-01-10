@@ -10,7 +10,7 @@ Imports System.Runtime.InteropServices
 
 <Assembly: AssemblyTitle("ExcelPeeler2019")>
 <Assembly: AssemblyDescription("")>
-<Assembly: AssemblyCompany("Peelers Labo")>
+<Assembly: AssemblyCompany("Revit Peeler")>
 <Assembly: AssemblyProduct("ExcelPeeler2019")>
 <Assembly: AssemblyCopyright("Copyright ©  2019 Akihiro Takatori")>
 <Assembly: AssemblyTrademark("Revit Peeler")>
