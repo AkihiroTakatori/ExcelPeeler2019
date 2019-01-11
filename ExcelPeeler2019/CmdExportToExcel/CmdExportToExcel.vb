@@ -1,10 +1,7 @@
-﻿Imports System
-Imports Autodesk
-Imports Autodesk.Revit
-Imports XLS = Microsoft.Office.Interop.Excel
-Imports Microsoft.Office.Interop
+﻿Imports Autodesk.Revit
+Imports ExcelPeeler2019.My.Resources
 
-<Attributes.Transaction(Attributes.TransactionMode.Manual)> _
+<Attributes.Transaction(Attributes.TransactionMode.ReadOnly)>
 Public Class CmdExportToExcel
     Implements UI.IExternalCommand
 
@@ -16,15 +13,18 @@ Public Class CmdExportToExcel
         '
         '************************************************************************
         Dim uiDoc As UI.UIDocument = commandData.Application.ActiveUIDocument
-        Dim tsk1 As New UI.TaskDialog("エクスポート拡張版")
+        Dim tsk1 As New UI.TaskDialog(CMD_EXPORTTOEXCEL)
         With tsk1
+            .TitleAutoPrefix = False
             .MainInstruction = "書出し範囲の選択"
             .MainContent = "書出す要素の範囲を選択してください。"
             .AddCommandLink(UI.TaskDialogCommandLinkId.CommandLink1, "プロジェクト全体の要素")
             .AddCommandLink(UI.TaskDialogCommandLinkId.CommandLink2, "現在のビューにある要素")
             .AddCommandLink(UI.TaskDialogCommandLinkId.CommandLink3, "現在選択されている要素")
-
+            .CommonButtons = UI.TaskDialogCommonButtons.Cancel
+            .DefaultButton = UI.TaskDialogResult.CommandLink1
         End With
+
         Dim res As UI.TaskDialogResult = tsk1.Show
         Dim mode As Integer = 0
         If res = UI.TaskDialogResult.CommandLink1 Then
@@ -35,7 +35,7 @@ Public Class CmdExportToExcel
             mode = 2
             '選択されていない場合は終了
             If uiDoc.Selection.GetElementIds.Count = 0 Then
-                MsgBox("要素を選択してから起動してください。", MsgBoxStyle.OkOnly, "RUTS")
+                MsgBox("要素を選択してから起動してください。", MsgBoxStyle.OkOnly, CMD_EXPORTTOEXCEL)
                 Return UI.Result.Cancelled
             End If
         Else
@@ -52,7 +52,7 @@ Public Class CmdExportToExcel
             Return UI.Result.Cancelled
         End If
 
-        MsgBox("出力が完了しました。")
+        MsgBox("出力が完了しました。", MsgBoxStyle.OkOnly, CMD_EXPORTTOEXCEL)
 
         Return UI.Result.Succeeded
 

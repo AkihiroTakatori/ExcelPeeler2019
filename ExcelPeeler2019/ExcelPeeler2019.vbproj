@@ -163,7 +163,7 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="CmdImportToExcel\" />
+    <Folder Include="CmdImportFromExcel\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
