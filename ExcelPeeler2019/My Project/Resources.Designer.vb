@@ -61,11 +61,38 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  エクセルにパラメータを出力 に類似しているローカライズされた文字列を検索します。
+        '''  エクスポート に類似しているローカライズされた文字列を検索します。
         '''</summary>
         Friend ReadOnly Property CMD_EXPORTTOEXCEL() As String
             Get
                 Return ResourceManager.GetString("CMD_EXPORTTOEXCEL", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  インポート に類似しているローカライズされた文字列を検索します。
+        '''</summary>
+        Friend ReadOnly Property CMD_IMPORTFROMEXCEL() As String
+            Get
+                Return ResourceManager.GetString("CMD_IMPORTFROMEXCEL", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Revit-Exel に類似しているローカライズされた文字列を検索します。
+        '''</summary>
+        Friend ReadOnly Property RBN_PNL_NAME() As String
+            Get
+                Return ResourceManager.GetString("RBN_PNL_NAME", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Peeler&apos;s に類似しているローカライズされた文字列を検索します。
+        '''</summary>
+        Friend ReadOnly Property RBN_TAB_NAME() As String
+            Get
+                Return ResourceManager.GetString("RBN_TAB_NAME", resourceCulture)
             End Get
         End Property
     End Module

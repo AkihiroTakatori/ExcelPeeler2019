@@ -22,7 +22,6 @@ Public Class CmdExportToExcel
             .AddCommandLink(UI.TaskDialogCommandLinkId.CommandLink2, "現在のビューにある要素")
             .AddCommandLink(UI.TaskDialogCommandLinkId.CommandLink3, "現在選択されている要素")
             .CommonButtons = UI.TaskDialogCommonButtons.Cancel
-            .DefaultButton = UI.TaskDialogResult.CommandLink1
         End With
 
         Dim res As UI.TaskDialogResult = tsk1.Show

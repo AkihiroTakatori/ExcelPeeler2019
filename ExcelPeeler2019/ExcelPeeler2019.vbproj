@@ -46,6 +46,7 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationCore" />
     <Reference Include="RevitAPI">
       <HintPath>..\..\..\..\Program Files\Autodesk\Revit 2019\RevitAPI.dll</HintPath>
     </Reference>
@@ -61,6 +62,7 @@
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Net.Http" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />
@@ -74,6 +76,8 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddRibbon\AppAddRibbon.vb" />
+    <Compile Include="AddRibbon\MdlImageUtils.vb" />
     <Compile Include="CmdExportToExcel\CmdExportToExcel.vb" />
     <Compile Include="CmdExportToExcel\DlgCatAndParam.designer.vb">
       <DependentUpon>DlgCatAndParam.vb</DependentUpon>
@@ -87,6 +91,7 @@
     <Compile Include="CmdExportToExcel\DlgCatParamExp.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="CmdImportFromExcel\CmdImportFromExcel.vb" />
     <Compile Include="DialogItems\ItmParameter.vb" />
     <Compile Include="DialogItems\ItmCategory.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -162,8 +167,6 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="CmdImportFromExcel\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
